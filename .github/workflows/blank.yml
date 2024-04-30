@@ -25,6 +25,7 @@ jobs:
       SCRIPT_OS_NAME: ${{ fromJSON('{"windows-2022":"Windows"}')[matrix.os] }}
       SCRIPT_OS_RID: ${{ fromJSON('{"windows-2022":"win-x64"}')[matrix.os] }}
       SCRIPT_OS_RID_ARM: ${{ fromJSON('{"windows-2022":"win-arm64"}')[matrix.os] }}
+      DOTNET_TOOLS_ALLOW_MANIFEST_IN_ROOT: true 
 
     name: Build ${{ matrix.configuration }} ${{ fromJSON('{"windows-2022":"Windows"}')[matrix.os] }}
     
