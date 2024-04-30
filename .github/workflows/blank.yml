@@ -22,11 +22,11 @@ jobs:
       DOTNET_VERSION: '8.0.x'
       DOTNET_NOLOGO: true
       DOTNET_CLI_TELEMETRY_OPTOUT: true
-      SCRIPT_OS_NAME: ${{ fromJSON('{"windows-2022":"Windows","ubuntu-22.04":"Linux","macos-12":"macOS"}')[matrix.os] }}
-      SCRIPT_OS_RID: ${{ fromJSON('{"windows-2022":"win-x64","ubuntu-22.04":"linux-x64","macos-12":"osx-x64"}')[matrix.os] }}
-      SCRIPT_OS_RID_ARM: ${{ fromJSON('{"windows-2022":"win-arm64","ubuntu-22.04":"linux-arm64","macos-12":"osx-arm64"}')[matrix.os] }}
+      SCRIPT_OS_NAME: ${{ fromJSON('{"windows-2022":"Windows"}')[matrix.os] }}
+      SCRIPT_OS_RID: ${{ fromJSON('{"windows-2022":"win-x64"}')[matrix.os] }}
+      SCRIPT_OS_RID_ARM: ${{ fromJSON('{"windows-2022":"win-arm64"}')[matrix.os] }}
 
-    name: Build ${{ matrix.configuration }} ${{ fromJSON('{"windows-2022":"Windows","ubuntu-22.04":"Linux","macos-12":"macOS"}')[matrix.os] }}
+    name: Build ${{ matrix.configuration }} ${{ fromJSON('{"windows-2022":"Windows"}')[matrix.os] }}
     
     steps:
     
